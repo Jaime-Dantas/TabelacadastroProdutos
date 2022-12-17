@@ -1,0 +1,78 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,400;0,500;0,700;1,200;1,300;1,400;1,600;1,700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;1,100;1,200;1,300;1,400;1,500&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+}
+
+body{
+  font-family: 'Poppins', sans-serif;
+  background-color: #f0f1f1;
+}
+
+header{
+  color: #fff;
+  background-color: blueviolet;
+  font-size: 1rem;
+  text-align: center;
+  padding: 5px;
+}
+
+main{
+  padding: 30px 50px;
+}
+
+.card{
+  background-color: #fff;
+  border: 1 solid #ccc;
+  padding: 20px;
+  margin-top: 15px;
+  border-radius: 5px;
+}
+
+.lineinput{
+  display: grid;
+  margin-bottom: 10px;  
+}
+
+input{
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  outline: 0;
+}
+
+button{
+  border:  0px;
+  padding: 10px;
+  outline: 0;
+  background-color: blueviolet;
+  color: #fff;
+  border-radius: 5px;
+  font-weight: bolder;
+  transition: all ease 0.4s;
+  cursor: pointer;
+}
+
+button:hover{
+  background-color: rgb(102, 31, 168);
+}
+
+table{
+  border-collapse: collapse;
+  border: 1px solid #ccc;
+  width: 100%;
+}
+
+table th{
+  background-color: rgb(214, 214, 214);
+  text-align: left;
+}
+
+table td img{
+  width: 20px;
+}
+
+.center{
+  text-align: center;
+}

@@ -9,9 +9,49 @@
   <title>Produtos</title>
 </head>
 <body>
-  
-  
+  <header>
+    <h1>Supermercado Carrinho Contente</h1>
+    <span>Aqui o seu dinheiro rende!</span>
+  </header>
 
+  <main>
+    <div class="title">
+      <h2>Cadastro de produtos</h2>
+      <span>lista de produtos</span>
+    </div>
+    <div class="card">
+      <div class="lineinput">
+          <label>Produto</label>
+          <input type="text" id="produto" placeholder="Nome do produto">
+      </div>
+
+      <div class="lineinput">
+          <label>Valor</label>
+          <input type="text" id="valor" placeholder="valor do produto">
+      </div>
+
+      <button onclick="produto.cadastrar()">cadastrar</button>
+      <button onclick="produto.excluir()">excluir</button>
+
+      <div class="listaProdutos">
+          <table border="1">
+            <thead>
+              <th>ID</th>
+              <th>NOME</th>
+              <th>VALOR</th>
+              <th>AÇÕES</th>
+            </thead>
+            <tbody>
+              <td>01</td>
+              <td>pamonha</td>
+              <td>4.00</td>
+            </tbody>
+          </table>
+      </div>
+    </div>
+
+
+  </main>
 
 
 
