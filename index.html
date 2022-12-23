@@ -26,26 +26,26 @@
       </div>
 
       <div class="lineinput">
-          <label>Valor</label>
-          <input type="text" id="valor" placeholder="valor do produto">
+          <label>Preço</label>
+          <input type="text" id="preco" placeholder="valor do produto">
       </div>
 
-      <button onclick="produto.cadastrar()">cadastrar</button>
-      <button onclick="produto.excluir()">excluir</button>
+      <button onclick="produto.salvar()">cadastrar</button>
+      <button onclick="produto.cancelar()">excluir</button>
 
       <div class="listaProdutos">
           <table border="1">
-            <thead>
+            <thead> <!--COLUNAS-->
               <th>ID</th>
               <th>NOME</th>
               <th>VALOR</th>
               <th>AÇÕES</th>
             </thead>
-            <tbody>
-              <td>01</td>
-              <td>pamonha</td>
-              <td>4.00</td>
+
+            <tbody id="tbody"> <!--LINHAS-->
+
             </tbody>
+            
           </table>
       </div>
     </div>
