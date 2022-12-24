@@ -1,15 +1,14 @@
-
+<h1 align="center">Projeto Lista de cadastro de produtos dinâmica.</h1>
 <p align="center">
-  <h1>Projeto Lista de cadastro de produtos dinêmica.</h1>
+  
   <img src="https://img.shields.io/badge/STATUS-EM%20DESENVOLVIMENTO-brightgreen">
 </p>
 
 ![GitHub Org's stars](https://img.shields.io/github/stars/Jaime-Dantas?style=social)
 
 * 
-
-  <p text-align="center">
-  <h4>:clipboard: Descrição do Projeto</h4>
+  <h4 align="center">:clipboard: Descrição do Projeto</h4>
+  <p align="center">  
   Tabela dinamica de cadastro de produtos usando POO. A tabela inclue as funçõe sde adicionar, remover e editar um item.
   </p>
   
