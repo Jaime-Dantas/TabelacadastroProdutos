@@ -2,11 +2,11 @@
 <p align="center">
   
   <img src="https://img.shields.io/badge/STATUS-EM%20DESENVOLVIMENTO-brightgreen">
+
+<p align="center">
+<img src=https://img.shields.io/github/stars/Jaime-Dantas?style=social>
 </p>
 
-![GitHub Org's stars](https://img.shields.io/github/stars/Jaime-Dantas?style=social)
-
-* 
   <h4 align="center">:clipboard: Descrição do Projeto</h4>
   <p align="center">  
   Tabela dinamica de cadastro de produtos usando POO. A tabela inclue as funçõe sde adicionar, remover e editar um item.
