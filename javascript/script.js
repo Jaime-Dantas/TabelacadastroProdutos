@@ -5,6 +5,7 @@ class Produto {
   constructor(){
     this.id = 1;
     this.arrayProdutos = [];
+    this.editId = null;
   }
 
   salvar(){
@@ -12,12 +13,19 @@ class Produto {
     let produto = this.lerDados();
 
     if(this.validacaoCampos(produto)){
-      this.adicionar(produto);
+      if(this.editId == null){
+        this.adicionar(produto);
+      } else {
+        this.atualizar(this.editId, produto);
+       
+      }
+      document.getElementById('btn1').innerText = 'Cadastrar';
       
     }
 
+
     this.listaTabela();
-    console.log(this.arrayProdutos);
+    this.cancelar();
     
   }
 
@@ -38,6 +46,42 @@ class Produto {
       td_id.innerText = this.arrayProdutos[i].id;
       td_produto.innerText = this.arrayProdutos[i].nomeProduto;
       td_valor.innerText = this.arrayProdutos[i].preco;
+
+      td_id.classList.add('center');
+
+      //adicionando os botões das ações excluir e editar
+
+      let imgEdit = document.createElement('img');
+      imgEdit.src = 'img/editar.png';
+      imgEdit.setAttribute("onclick","produto.editarProd("+ JSON.stringify(this.arrayProdutos[i]) +")");
+      
+      let imgDelet = document.createElement('img');
+      imgDelet.src = 'img/apagar.png';
+      imgDelet.setAttribute("onclick","produto.deletar("+ this.arrayProdutos[i].id +")");
+
+      td_acoes.appendChild(imgEdit);
+      td_acoes.appendChild(imgDelet);
+
+      console.log(this.arrayProdutos);
+    }
+  }
+
+  editarProd(dados){
+    this.editId = dados.id;
+    
+    document.getElementById('produto').value = dados.nomeProduto;
+    document.getElementById('preco').value = dados.preco;
+
+    document.getElementById('btn1').innerText = 'Atualizar';
+  }
+
+  atualizar(id, produto){
+    for(let i=0; i<this.arrayProdutos.length; i++){
+      if(this.arrayProdutos[i].id == id){
+        this.arrayProdutos[i].nomeProduto = produto.nomeProduto;
+        this.arrayProdutos[i].preco = produto.preco;
+
+      }
     }
   }
 
@@ -62,7 +106,8 @@ class Produto {
     }
 
   cancelar(){
-    
+    document.getElementById('produto').value = '';
+    document.getElementById('preco').value = '';
   }
 
   
@@ -86,8 +131,16 @@ class Produto {
     return true;
   }
 
-  excluir(){
-    alert('Excluido com sucesso!');
+  deletar(id){
+    let tbody = document.getElementById('tbody');
+
+    for(let i = 0; i < this.arrayProdutos.length; i++){
+       if(this.arrayProdutos[i].id == id){
+          this.arrayProdutos.splice(i, 1);
+          tbody.deleteRow(i);
+       }
+    }
+    console.log(this.arrayProdutos);
   }
 
 }
